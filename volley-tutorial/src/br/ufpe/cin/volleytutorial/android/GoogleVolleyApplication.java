@@ -1,7 +1,6 @@
-package com.wordpress.felipenipo.android;
+package br.ufpe.cin.volleytutorial.android;
 
-import com.wordpress.felipenipo.network.NetworkQueue;
-
+import br.ufpe.cin.volleytutorial.network.NetworkQueue;
 import android.app.Application;
 
 public class GoogleVolleyApplication extends Application {

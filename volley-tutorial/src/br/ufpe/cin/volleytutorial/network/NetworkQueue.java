@@ -1,4 +1,4 @@
-package com.wordpress.felipenipo.network;
+package br.ufpe.cin.volleytutorial.network;
 
 import java.util.HashMap;
 import java.util.Map;

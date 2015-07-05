@@ -1,11 +1,12 @@
-package com.wordpress.felipenipo.android.activities;
+package br.ufpe.cin.volleytutorial.android.activities;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import br.ufpe.cin.volleytutorial.network.NetworkQueue;
+import br.ufpe.cin.volleytutorial.network.NetworkRequestCallback;
+
 import com.wordpress.felipenipo.R;
-import com.wordpress.felipenipo.network.NetworkQueue;
-import com.wordpress.felipenipo.network.NetworkRequestCallback;
 
 import android.app.Activity;
 import android.os.Bundle;

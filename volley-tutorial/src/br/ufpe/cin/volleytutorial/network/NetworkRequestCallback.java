@@ -1,4 +1,4 @@
-package com.wordpress.felipenipo.network;
+package br.ufpe.cin.volleytutorial.network;
 
 public interface NetworkRequestCallback<T> {
 
