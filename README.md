@@ -36,6 +36,30 @@ Na classe `NetworkQueue`, 5 métodos públicos são utilizados para manipulaçã
 #### doGet
 Este método recebe uma url(url destino da requisição), um objeto para servir como tag e um `NetworkRequestCallback` que tem seus métodos chamados quando a requisição termina, com sucesso ou com erro. Este método adiciona à fila do volley uma requisição HTTP do tipo GET  que espera uma resposta no formato de um objeto JSON.
 
+Um exemplo de uso deste método é o seguinte trecho de código da classe `MainActivity`
+```
+mGetItButton.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				mNetworkQueue.doGet(
+		        	"" + mIdEditText.getText().toString(),
+		        	TAG,
+		        	new NetworkRequestCallback<JSONObject>() {
+		        		@Override
+						public void onRequestResponse(JSONObject jsonObject) {
+							Log.d(TAG, "GET onRequestResponse!" + "\n" + jsonObject.toString());
+						}
+						@Override
+						public void onRequestError(Exception error) {
+							Log.d(TAG, "GET onRequestError!" + "\n" + error.getMessage());
+						}
+					});
+			}
+		});
+    }
+```
+Este trecho de código diz que quando o botão `mGetItButton` for clicado, uma requisição do tipo GET é disparada, através da instância `mNetworkQueue` da classe `NetworkQueue`.
+
 #### doGetArray
 Similar ao doGet, porém espera um array JSON.
 
